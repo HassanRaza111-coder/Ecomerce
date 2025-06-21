@@ -5,7 +5,7 @@ const connectDB = async () => {
     console.log("MongoDB connected");
   });
 
-  await mongoose.connect("mongodb+srv://sajidhussainrehan9:REHAN786@cluster0.4senq.mongodb.net/");
+  await mongoose.connect(process.env.MONGODB_URI);
 };
 
 export default connectDB;
